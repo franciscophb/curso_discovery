@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/franciscophb/curso_discovery/issues"
   },
-  "homepage": "https://github.com/franciscophb/curso_discovery#readme"
+  "homepage": "https://github.com/franciscophb/curso_discovery#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
