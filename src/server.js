@@ -23,22 +23,31 @@ const proffys =[
     }
 ]
 function pageLanding(req, res){
-    return res.sendFile(__dirname + "/views/index.html")
+    return res.render("index.html",{proffys, title:"hi from nunjucks"})
 }
 
 function pageStudy(req, res){
-    return res.sendFile(__dirname + "/views/study.html")
+    return res.render("study.html")
 }
 
 function pageGiveClasses(req, res){
-    return res.sendFile(__dirname + "/views/give-classes.html")
+    return res.render("give-classes.html")
 }
 
 const express = require('express')
 const server = express()
+const nunjucks = require('nunjucks')
 
-server.use(express.static("public"))
+//configurar nunjucks
+nunjucks.configure('src/views',{
+    express: server,
+    noCache: true,
+})
 
+server
+//configurar arquivos estáticos(css, scripts, imagens)
+.use(express.static("public"))
+//Rotas a aplicação
 .get("/", pageLanding)
 .get("/study", pageStudy)
 .get("/give-classes", pageGiveClasses)
