@@ -4,7 +4,7 @@
 } 
 
 #page-give-classes .page-header .header-content{
-    margin-bottom: 6.4;
+    margin-bottom: 6.4rem;
 }
 
 #page-give-classes main{
@@ -93,6 +93,11 @@
     transition: 0.2s;
     margin-top: 3.2rem;
 }
+
+#page-give-classes main footer button:hover {
+    background: var(--color-secondary-dark);
+}
+
 
 .schedule-item+.schedule-item{
     margin-top: 3.2rem;
