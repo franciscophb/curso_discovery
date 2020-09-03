@@ -56,7 +56,7 @@ const weekdays = [
     "Quarta-feira",
     "Quinta-feira",
     "Sexta-feira",
-    "Sábad",
+    "Sábado",
 ]
 //funcionalidades
 function getSubject(subjectNumber){
