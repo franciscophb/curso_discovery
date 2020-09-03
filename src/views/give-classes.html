@@ -92,7 +92,7 @@
                                 <label for="weekday">Dia da semana</label>
                                 <select name="weekday[]" required>
                                     <option value="">Selecione uma opção</option>
-                                        {%for weekday in weekdays%}
+                                        {%for weekday in weekdays %}
                                             <option value="{{loop.index0}}">
                                                 {{weekday}}
                                             </option>
