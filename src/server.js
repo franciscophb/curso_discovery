@@ -60,7 +60,7 @@ const weekdays = [
 ]
 //funcionalidades
 function getSubject(subjectNumber){
-    const arrayPosition = +subjectNumber - 1
+    const arrayPosition = + subjectNumber - 1
     return subjects[arrayPosition]
 }
 
@@ -82,7 +82,8 @@ function pageGiveClasses(req, res){
  
     //se tiver dados (data)
     if(isNotEmpty){
-        console.log('entrei aqui')
+       
+        data.subject = getSubject(data.subject)
         //adicionar data ao a lista de proffys
         proffys.push(data)
         //se não, não adiocionar, mostrar a pagina
