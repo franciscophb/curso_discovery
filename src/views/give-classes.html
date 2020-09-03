@@ -66,13 +66,10 @@
                         <select name="subject" id="subject" required>
                             <option value="">Selecione uma opção</option>
                             {%for subject in subjects%}
-
                                 <option value="{{loop.index}}">
                                     {{subject}}
                                 </option>
-
                             {%endfor%}
-
                         </select>
                     </div>
 
@@ -80,14 +77,14 @@
                         <label for="cost">Custo da sua hora/aula
                             <small>(R$)</small>
                         </label>
-                        <input type="cost" id="cost" type="number" required>
+                        <input name="cost" type="cost" id="cost" type="number" required>
                     </div>
 
                 </fieldset>
 
                 <fieldset id="schedule-items">
                     <legend>Horários disponíveis
-                        <button type="button" id="add-time" >+ Novo horário</button>
+                        <button type="button" id="add-time">+ Novo horário</button>
                     </legend>
 
                         <div class="schedule-item">
